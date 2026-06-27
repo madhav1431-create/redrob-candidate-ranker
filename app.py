@@ -23,7 +23,7 @@ def load_results():
 
 @st.cache_data
 def load_candidate(cand_id):
-    with open("candidates.jsonl", "r", encoding="utf-8") as f:
+    with open("sample_candidates.jsonl", "r", encoding="utf-8") as f:
         for line in f:
             c = json.loads(line)
             if c.get("candidate_id") == cand_id:
